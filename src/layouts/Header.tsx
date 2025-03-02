@@ -52,7 +52,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button className="md:hidden p-2 rounded-lg hover:bg-gray-800" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden p-2 rounded-lg text-white hover:bg-gray-800" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
           </button>
         </div>
