@@ -10,9 +10,9 @@ export const ValueProposition = () => {
           className="text-4xl md:text-5xl font-bold text-center mb-16 px-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "0px 0px 100px 0px" }} // Increased margin
+          viewport={{ once: true, margin: "0px 0px 100px 0px" }}
         >
-          <span className="text-blue-400">Smart Infrastructure</span> Solutions
+          <p className="text-white"><span className="text-blue-400">Smart Infrastructure</span> Solutions </p>
         </motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
