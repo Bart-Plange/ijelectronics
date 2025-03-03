@@ -46,32 +46,22 @@ export const ServicesHero = () => {
         </motion.div>
       </div>
 
-      {/* Infrastructure Graphic */}
-      <div className="absolute right-0 top-0 h-full w-1/2 md:w-1/3">
-        {/* Light Beam */}
-        <div className="absolute inset-0 bg-gradient-to-l from-blue-400/20 to-transparent w-full h-full pointer-events-none" />
+      {/* Streetlight and Illumination Effect */}
+      <div className="absolute right-0 top-0 h-full w-1/6 md:w-1/3">
+        {/* Light Beam with mobile opacity */}
+        <div className="absolute inset-0 bg-gradient-to-l from-yellow-400/20 to-transparent w-full h-full pointer-events-none md:opacity-100 opacity-50" />
         
-        {/* Building Cluster Graphic */}
-        <div className="absolute right-24 h-full flex items-center">
-          <div className="relative h-3/4">
-            {/* Building Structure */}
-            <div className="w-24 h-full bg-gray-300/20 backdrop-blur-sm rounded-lg flex flex-col items-center p-4">
-              {/* Building Windows Pattern */}
-              <div className="w-full grid grid-cols-3 gap-2 mt-4">
-                {[...Array(18)].map((_, i) => (
-                  <div key={i} className="h-6 bg-blue-400/30 rounded-sm" />
-                ))}
-              </div>
-            </div>
-            
-            {/* Glowing Element */}
-            <div className="absolute top-1/2 -right-8 w-16 h-16 bg-blue-400 rounded-full blur-xl opacity-30 animate-pulse" />
+        {/* Streetlight Pole with mobile opacity */}
+        <div className="absolute md:right-24 right-4 h-full w-2 bg-gray-300 md:opacity-100 opacity-50">
+          {/* Light Fixture */}
+          <div className="absolute top-1/4 -right-4 w-12 h-24 bg-gray-400 rounded-t-full flex items-end justify-center pb-4">
+            <div className="w-8 h-8 bg-yellow-400 rounded-full animate-glow shadow-glow" />
           </div>
         </div>
 
-        {/* Decorative Elements */}
-        <div className="absolute right-20 top-1/3 w-32 h-32 bg-blue-600/20 rounded-full blur-xl" />
-        <div className="absolute right-32 top-1/2 w-24 h-24 bg-yellow-400/20 rounded-full blur-xl" />
+        {/* Decorative Elements with mobile opacity */}
+        <div className="absolute right-20 top-1/3 w-32 h-32 bg-blue-600/20 rounded-full blur-xl md:opacity-100 opacity-50" />
+        <div className="absolute right-32 top-1/2 w-24 h-24 bg-yellow-400/20 rounded-full blur-xl md:opacity-100 opacity-50" />
       </div>
 
       {/* Animated Sparks */}
@@ -79,7 +69,7 @@ export const ServicesHero = () => {
         {[...Array(12)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1.5 h-1.5 bg-blue-400 rounded-full"
+            className="absolute w-1.5 h-1.5 bg-yellow-400 rounded-full"
             initial={{ opacity: 0 }}
             animate={{
               opacity: [0, 1, 0],

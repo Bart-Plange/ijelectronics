@@ -1,4 +1,3 @@
-// components/Hero.tsx
 import { motion } from "framer-motion";
 import { Bolt } from "lucide-react";
 
@@ -46,21 +45,21 @@ export const Hero = () => {
       </div>
 
       {/* Streetlight and Illumination Effect */}
-      <div className="absolute right-0 top-0 h-full w-1/2 md:w-1/3">
-        {/* Light Beam */}
-        <div className="absolute inset-0 bg-gradient-to-l from-yellow-400/20 to-transparent w-full h-full pointer-events-none" />
+      <div className="absolute right-0 top-0 h-full w-1/6 md:w-1/3">
+        {/* Light Beam with mobile opacity */}
+        <div className="absolute inset-0 bg-gradient-to-l from-yellow-400/20 to-transparent w-full h-full pointer-events-none md:opacity-100 opacity-50" />
         
-        {/* Streetlight Pole */}
-        <div className="absolute right-24 h-full w-2 bg-gray-300">
+        {/* Streetlight Pole with mobile opacity */}
+        <div className="absolute md:right-24 right-4 h-full w-2 bg-gray-300 md:opacity-100 opacity-50">
           {/* Light Fixture */}
           <div className="absolute top-1/4 -right-4 w-12 h-24 bg-gray-400 rounded-t-full flex items-end justify-center pb-4">
             <div className="w-8 h-8 bg-yellow-400 rounded-full animate-glow shadow-glow" />
           </div>
         </div>
 
-        {/* Decorative Elements */}
-        <div className="absolute right-20 top-1/3 w-32 h-32 bg-blue-600/20 rounded-full blur-xl" />
-        <div className="absolute right-32 top-1/2 w-24 h-24 bg-yellow-400/20 rounded-full blur-xl" />
+        {/* Decorative Elements with mobile opacity */}
+        <div className="absolute right-20 top-1/3 w-32 h-32 bg-blue-600/20 rounded-full blur-xl md:opacity-100 opacity-50" />
+        <div className="absolute right-32 top-1/2 w-24 h-24 bg-yellow-400/20 rounded-full blur-xl md:opacity-100 opacity-50" />
       </div>
 
       {/* Animated Sparks */}
