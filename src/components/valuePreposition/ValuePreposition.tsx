@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaBuilding, FaCouch, FaTrafficLight } from "react-icons/fa";
+import { FaStreetView, FaTrafficLight, FaIndustry } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export const ValueProposition = () => {
@@ -12,27 +12,27 @@ export const ValueProposition = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "0px 0px 100px 0px" }}
         >
-          <p className="text-white"><span className="text-blue-400">Smart Infrastructure</span> Solutions </p>
+          <p className="text-white"><span className="text-blue-400">Smart Infrastructure</span> Solutions</p>
         </motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
           <ServiceCard
-            id="buildings-industry"
-            icon={<FaBuilding className="text-4xl" />}
-            title="Buildings & Industry"
-            content="Advanced solutions for commercial and industrial facilities including energy management systems, environmental controls, and UV-C disinfection technology."
+            id="street-lighting"
+            icon={<FaStreetView className="text-4xl" />}
+            title="Street Lighting Solutions"
+            content="Comprehensive supply and installation of modern lighting systems for all road types, including highways and public thoroughfares, with full maintenance services."
           />
           <ServiceCard
-            id="interior-spaces"
-            icon={<FaCouch className="text-4xl" />}
-            title="Smart Interior Spaces"
-            content="Biophilic design integration with climate optimization and photocatalytic air purification for healthier living environments."
+            id="traffic-lights"
+            icon={<FaTrafficLight className="text-4xl" />}
+            title="Traffic Light Systems"
+            content="Complete traffic signal solutions including installation, maintenance, and smart optimization technologies for improved traffic flow."
           />
           <ServiceCard 
-            id="street-infrastructure"
-            icon={<FaTrafficLight className="text-4xl" />}
-            title="Urban Infrastructure"
-            content="Smart urban infrastructure featuring adaptive LED networks, AI traffic optimization, and connected pedestrian safety solutions."
+            id="industrial-lighting"
+            icon={<FaIndustry className="text-4xl" />}
+            title="Industrial Lighting"
+            content="High-performance LED solutions for industrial facilities with energy monitoring and predictive maintenance services."
           />
         </div>
       </div>
@@ -49,7 +49,7 @@ const ServiceCard = ({ id, icon, title, content }: {
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "0px 0px 100px 0px" }} // Changed from negative margin
+    viewport={{ once: true, margin: "0px 0px 100px 0px" }}
     className="group relative bg-gray-800 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 min-h-[400px] flex flex-col"
   >
     <Link 

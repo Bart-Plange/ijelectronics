@@ -1,33 +1,78 @@
 // ServicesPage.tsx
+// ServicesPage.tsx
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { FaBuilding, FaTrafficLight, FaPaintRoller } from "react-icons/fa";
+import { 
+  FaStreetView, 
+  FaTrafficLight, 
+  FaIndustry,
+  FaThermometerHalf,
+  FaLeaf,
+  FaCloud,
+  FaTree,
+  FaTools
+} from "react-icons/fa";
 import { useRef } from "react";
 import { ServicesHero } from "../components";
 
 const Services = () => {
-    const services = [
-        {
-          id: "buildings-industry", // Match ValueProposition ID
-          title: "Buildings & Industry",
-          icon: <FaBuilding className="text-6xl" />,
-          content: "Advanced solutions for **commercial** and **industrial facilities** including energy management systems, **environmental controls**, and **UV-C disinfection technology**.",
-          imageSide: "right"
-        },
-        {
-          id: "street-infrastructure", // Match ValueProposition ID
-          title: "Urban Infrastructure", // Updated to match ValueProposition
-          icon: <FaTrafficLight className="text-6xl" />,
-          content: "Smart **urban infrastructure** featuring adaptive LED networks, **AI traffic optimization**, and connected **pedestrian safety solutions**.",
-          imageSide: "left"
-        },
-        {
-          id: "interior-spaces", // Match ValueProposition ID
-          title: "Smart Interior Spaces", // Keep consistent
-          icon: <FaPaintRoller className="text-6xl" />,
-          content: "**Biophilic design** integration with **climate optimization** and photocatalytic **air purification** for healthier living environments.",
-          imageSide: "right"
-        }
-      ];
+  const services = [
+    {
+      id: "street-lighting",
+      title: "Street Lighting Solutions",
+      icon: <FaStreetView className="text-6xl" />,
+      content: "**Supply and installation** of modern street lighting systems for **all road types** including highways and public thoroughfares. Comprehensive maintenance and servicing programs.",
+      imageSide: "right"
+    },
+    {
+      id: "traffic-lights",
+      title: "Traffic Light Systems",
+      icon: <FaTrafficLight className="text-6xl" />,
+      content: "Full-cycle solutions for **traffic signal systems** including **installation, maintenance**, and smart optimization technologies for improved traffic flow.",
+      imageSide: "left"
+    },
+    {
+      id: "industrial-lighting",
+      title: "Industrial Lighting",
+      icon: <FaIndustry className="text-6xl" />,
+      content: "Specialized **high-bay LED solutions** for industrial facilities with **energy monitoring** and predictive maintenance services.",
+      imageSide: "right"
+    },
+    {
+      id: "thermal-insulation",
+      title: "Thermal Insulation Coating",
+      icon: <FaThermometerHalf className="text-6xl" />,
+      content: "Advanced **thermal insulation solutions** application services for buildings and industrial equipment using **nano-technology coatings**.",
+      imageSide: "left"
+    },
+    {
+      id: "photocatalytic-coating",
+      title: "Photocatalytic Coating",
+      icon: <FaLeaf className="text-6xl" />,
+      content: "Environmentally-friendly **patented coatings** for air purification and surface protection using **UV-activated photocatalytic technology**.",
+      imageSide: "right"
+    },
+    {
+      id: "air-sensors",
+      title: "Air Quality Sensors",
+      icon: <FaCloud className="text-6xl" />,
+      content: "Supply and integration of **specialized sensors** for real-time **air pollution monitoring** and data analysis systems.",
+      imageSide: "left"
+    },
+    {
+      id: "ecological-construction",
+      title: "Ecological Construction",
+      icon: <FaTree className="text-6xl" />,
+      content: "Sustainable construction services focusing on **green building materials** and **energy-efficient infrastructure** development.",
+      imageSide: "right"
+    },
+    {
+      id: "general-services",
+      title: "General Services",
+      icon: <FaTools className="text-6xl" />,
+      content: "Comprehensive **maintenance and support** services for urban infrastructure and industrial facilities.",
+      imageSide: "left"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-900">
