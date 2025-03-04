@@ -4,7 +4,7 @@ import { Bolt } from "lucide-react";
 
 export const ServicesHero = () => {
   return (
-    <div className="relative -mt-[6.5rem] pt-[6.5rem] min-h-[800px] bg-gray-900 text-white pb-16 px-6 overflow-hidden">
+    <header className="relative -mt-[6.5rem] pt-[6.5rem] min-h-[800px] bg-gray-900 text-white pb-16 px-6 overflow-hidden">
       {/* Gradient overlay for seamless transition */}
       <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-gray-900 to-transparent z-10" />
 
@@ -16,7 +16,7 @@ export const ServicesHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Intelligent Urban Solutions
+          Sustainable Infrastructure Specialists
         </motion.p>
         
         <motion.h1
@@ -26,7 +26,7 @@ export const ServicesHero = () => {
           transition={{ duration: 1, delay: 0.2 }}
         >
           Smart Infrastructure<br className="hidden md:block"/> 
-          <span className="text-blue-400">Services</span>
+          <span className="text-blue-400">Engineering Services</span>
         </motion.h1>
         
         <motion.div
@@ -36,15 +36,39 @@ export const ServicesHero = () => {
           transition={{ duration: 1, delay: 0.6 }}
         >
           <p className="text-gray-300 text-lg max-w-xl mb-6">
-            Integrated solutions combining aesthetic design with technical innovation 
-            for modern urban environments. Scalable & sustainable systems.
+            Full-cycle electrical systems and eco-conscious solutions for public infrastructure 
+            and industrial applications. Expertise in energy-efficient implementations, 
+            smart city technologies, and environmental management systems.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 transition-all px-8 py-4 text-lg font-semibold rounded-full flex items-center gap-2 shadow-xl">
+          <motion.button 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-blue-600 hover:bg-blue-700 transition-all px-8 py-4 text-lg font-semibold rounded-full flex items-center gap-2 shadow-xl"
+            aria-label="Explore our sustainable infrastructure services"
+          >
             <Bolt className="w-5 h-5" />
-            Explore Solutions
-          </button>
+            Discover Sustainable Systems
+          </motion.button>
         </motion.div>
       </div>
+
+      {/* Structured Data for SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "IJ Global Green Technology Limited",
+          "image": "/logo.webp",
+          "description": "Provider of smart infrastructure solutions including energy-efficient lighting systems, traffic management technologies, and environmental monitoring services.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Accra",
+            "addressRegion": "Greater Accra",
+            "addressCountry": "GH"
+          },
+          "serviceArea": ["Ghana", "Central Europe"]
+        })}
+      </script>
 
       {/* Streetlight and Illumination Effect */}
       <div className="absolute right-0 top-0 h-full w-1/6 md:w-1/3">
@@ -90,7 +114,7 @@ export const ServicesHero = () => {
           />
         ))}
       </div>
-    </div>
+    </header>
   );
 };
 

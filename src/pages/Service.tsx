@@ -1,5 +1,3 @@
-// ServicesPage.tsx
-// ServicesPage.tsx
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { 
   FaStreetView, 
@@ -18,72 +16,108 @@ const Services = () => {
   const services = [
     {
       id: "street-lighting",
-      title: "Street Lighting Solutions",
-      icon: <FaStreetView className="text-6xl" />,
-      content: "**Supply and installation** of modern street lighting systems for **all road types** including highways and public thoroughfares. Comprehensive maintenance and servicing programs.",
+      title: "Smart Street Lighting Systems",
+      icon: <FaStreetView className="text-6xl" aria-hidden="true" />,
+      content: "Complete **LED street lighting solutions** for highways & urban roads with **IoT-enabled monitoring** and maintenance across Ghana and Central Europe.",
+      image: "/images/street-lighting.webp",
       imageSide: "right"
     },
     {
       id: "traffic-lights",
-      title: "Traffic Light Systems",
-      icon: <FaTrafficLight className="text-6xl" />,
-      content: "Full-cycle solutions for **traffic signal systems** including **installation, maintenance**, and smart optimization technologies for improved traffic flow.",
+      title: "Intelligent Traffic Management",
+      icon: <FaTrafficLight className="text-6xl" aria-hidden="true" />,
+      content: "AI-powered **traffic signal systems** with real-time optimization and **24/7 emergency support** for urban networks.",
+      image: "/images/traffic-systems.webp",
       imageSide: "left"
     },
     {
       id: "industrial-lighting",
-      title: "Industrial Lighting",
-      icon: <FaIndustry className="text-6xl" />,
-      content: "Specialized **high-bay LED solutions** for industrial facilities with **energy monitoring** and predictive maintenance services.",
+      title: "Industrial LED Solutions",
+      icon: <FaIndustry className="text-6xl" aria-hidden="true" />,
+      content: "Hazard-rated **industrial lighting installations** with energy analytics and **predictive maintenance** services.",
+      image: "/images/industrial-lighting.webp",
       imageSide: "right"
     },
     {
       id: "thermal-insulation",
       title: "Thermal Insulation Coating",
-      icon: <FaThermometerHalf className="text-6xl" />,
-      content: "Advanced **thermal insulation solutions** application services for buildings and industrial equipment using **nano-technology coatings**.",
+      icon: <FaThermometerHalf className="text-6xl" aria-hidden="true" />,
+      content: "Advanced **nano-technology coatings** for buildings and industrial equipment with **10-year durability guarantee**.",
+      image: "/images/thermal-coating.webp",
       imageSide: "left"
     },
     {
       id: "photocatalytic-coating",
       title: "Photocatalytic Coating",
-      icon: <FaLeaf className="text-6xl" />,
-      content: "Environmentally-friendly **patented coatings** for air purification and surface protection using **UV-activated photocatalytic technology**.",
+      icon: <FaLeaf className="text-6xl" aria-hidden="true" />,
+      content: "UV-activated **air-purifying coatings** reducing pollutants by up to **60% in urban areas**.",
+      image: "/images/eco-coating.webp",
       imageSide: "right"
     },
     {
       id: "air-sensors",
-      title: "Air Quality Sensors",
-      icon: <FaCloud className="text-6xl" />,
-      content: "Supply and integration of **specialized sensors** for real-time **air pollution monitoring** and data analysis systems.",
+      title: "Air Quality Monitoring",
+      icon: <FaCloud className="text-6xl" aria-hidden="true" />,
+      content: "Real-time **pollution tracking systems** with **government-certified sensors** and data analysis.",
+      image: "/images/air-sensors.webp",
       imageSide: "left"
     },
     {
       id: "ecological-construction",
-      title: "Ecological Construction",
-      icon: <FaTree className="text-6xl" />,
-      content: "Sustainable construction services focusing on **green building materials** and **energy-efficient infrastructure** development.",
+      title: "Green Construction",
+      icon: <FaTree className="text-6xl" aria-hidden="true" />,
+      content: "Sustainable infrastructure development using **recycled materials** and **energy-efficient designs**.",
+      image: "/images/green-construction.webp",
       imageSide: "right"
     },
     {
       id: "general-services",
-      title: "General Services",
-      icon: <FaTools className="text-6xl" />,
-      content: "Comprehensive **maintenance and support** services for urban infrastructure and industrial facilities.",
+      title: "Maintenance Solutions",
+      icon: <FaTools className="text-6xl" aria-hidden="true" />,
+      content: "Comprehensive **preventive maintenance programs** for urban and industrial infrastructure.",
+      image: "/images/maintenance.webp",
       imageSide: "left"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <main className="bg-gray-900">
       <ServicesHero />
       
-      <div className="max-w-7xl mx-auto py-20 px-4 space-y-24">
+      <section 
+        className="max-w-6xl mx-auto py-20 px-4 space-y-24"
+        itemScope
+        itemType="https://schema.org/ItemList"
+        aria-label="Our Services"
+      >
         {services.map((service, index) => (
-          <ServiceSection key={index} service={service} index={index} />
+          <ServiceSection key={service.id} service={service} index={index} />
         ))}
-      </div>
-    </div>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": services.map((service, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "Service",
+                "name": service.title,
+                "description": service.content.replace(/\*\*/g, ''),
+                "image": service.image,
+                "serviceType": "Electrical/Construction",
+                "areaServed": ["Ghana", "Czech Republic"],
+                "availableChannel": {
+                  "@type": "ServiceChannel",
+                  "serviceUrl": `https://ijggtl.com/services#${service.id}`
+                }
+              }
+            }))
+          })}
+        </script>
+      </section>
+    </main>
   );
 };
 
@@ -93,24 +127,6 @@ const ServiceSection = ({ service, index }: { service: any; index: number }) => 
   const y = useMotionValue(0);
   const rotateX = useTransform(y, [0, 1], [0, 5]);
   const rotateY = useTransform(x, [0, 1], [0, -5]);
-
-  const parseHighlightedText = (text: string) => {
-    return text.split('**').map((part, i) => 
-      i % 2 === 0 ? (
-        part
-      ) : (
-        <motion.span
-          key={i}
-          className="text-blue-400"
-          initial={{ opacity: 0.5 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          {part}
-        </motion.span>
-      )
-    );
-  };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = containerRef.current?.getBoundingClientRect();
@@ -122,19 +138,40 @@ const ServiceSection = ({ service, index }: { service: any; index: number }) => 
     }
   };
 
+  const parseHighlightedText = (text: string) => {
+    return text.split('**').map((part, i) => 
+      i % 2 === 0 ? (
+        part
+      ) : (
+        <motion.span
+          key={i}
+          className="text-blue-400 font-semibold"
+          initial={{ opacity: 0.8 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          {part}
+        </motion.span>
+      )
+    );
+  };
+
   return (
-    <motion.div
-  ref={containerRef}
-  id={service.id} // Add this line for anchor linking
-  onMouseMove={handleMouseMove}
-  onMouseLeave={() => {
-    x.set(0);
-    y.set(0);
-  }}
-  className={`flex flex-col md:flex-row items-center gap-12 ${
-    service.imageSide === "left" ? "md:flex-row-reverse" : ""
-  }`}
->
+    <motion.article
+      ref={containerRef}
+      id={service.id}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={() => {
+        x.set(0);
+        y.set(0);
+      }}
+      className={`flex flex-col md:flex-row items-center gap-12 ${
+        service.imageSide === "left" ? "md:flex-row-reverse" : ""
+      }`}
+      itemScope
+      itemType="https://schema.org/Service"
+      aria-labelledby={`${service.id}-title`}
+    >
       {/* Text Content */}
       <motion.div
         initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -142,56 +179,56 @@ const ServiceSection = ({ service, index }: { service: any; index: number }) => 
         viewport={{ once: true, margin: "0px 0px -100px 0px" }}
         className="flex-1 space-y-6"
       >
-        <motion.div 
-          className="text-blue-400"
-          whileHover={{ scale: 1.05 }}
-        >
+        <div className="text-blue-400" aria-hidden="true">
           {service.icon}
-        </motion.div>
-        <h2 className="text-4xl font-bold text-white">
-          {service.title.split(' ').map((word: string, i: number) => (
-            <motion.span
-              key={i}
-              className="mr-2 inline-block"
-              whileHover={{ scale: 1.05 }}
-            >
-              {word}
-            </motion.span>
-          ))}
+        </div>
+        <h2 
+          id={`${service.id}-title`}
+          className="text-4xl font-bold text-white"
+          itemProp="name"
+        >
+          {service.title}
         </h2>
-        <p className="text-xl text-gray-300 leading-relaxed">
+        <p 
+          className="text-xl text-gray-300 leading-relaxed"
+          itemProp="description"
+        >
           {parseHighlightedText(service.content)}
         </p>
         <motion.button
           whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           className="bg-blue-600 px-8 py-3 rounded-full text-white hover:bg-blue-700 transition-colors"
+          aria-label={`Learn more about ${service.title}`}
         >
-          Learn More
+          Detailed Specifications
         </motion.button>
       </motion.div>
 
-      {/* Image/Graphic Section */}
+      {/* Image Section */}
       <motion.div
         style={{
           rotateX,
           rotateY,
           transformPerspective: 1000
         }}
-        className="flex-1 relative group"
+        className="flex-1 relative group w-full"
       >
         <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-1">
-          <div className="bg-gray-800 rounded-2xl p-8 min-h-[400px] flex items-center justify-center">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-            <motion.div 
-              className="text-blue-400 scale-150 transform"
-              whileHover={{ scale: 1.2 }}
-            >
-              {service.icon}
-            </motion.div>
+          <div className="bg-gray-800 rounded-2xl p-4 min-h-[400px] flex items-center justify-center">
+            <img
+              src={service.image}
+              alt={`${service.title} implementation example`}
+              loading="lazy"
+              className="object-cover w-full h-full rounded-xl"
+              width={600}
+              height={400}
+              itemProp="image"
+            />
           </div>
         </div>
       </motion.div>
-    </motion.div>
+    </motion.article>
   );
 };
 

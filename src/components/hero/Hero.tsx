@@ -15,7 +15,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Smart Electrical Solutions
+          Smart Electrical and electronic Experts
         </motion.p>
         
         <motion.h1
@@ -34,13 +34,20 @@ export const Hero = () => {
           transition={{ duration: 1, delay: 0.6 }}
         >
           <p className="text-gray-300 text-lg max-w-xl mb-6">
-            Innovative electrical solutions for street lighting, traffic systems, 
-            and smart city infrastructure. Energy-efficient & sustainable.
+            Delivering full-cycle electrical systems and eco-conscious solutions 
+            for public infrastructure and industrial applications. Specializing in 
+            energy-efficient lighting, smart city technologies, and sustainable 
+            environmental management systems.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 transition-all px-8 py-4 text-lg font-semibold rounded-full flex items-center gap-2 shadow-xl">
+          <motion.button 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-blue-600 hover:bg-blue-700 transition-all px-8 py-4 text-lg font-semibold rounded-full flex items-center gap-2 shadow-xl"
+            aria-label="Explore our sustainable infrastructure solutions"
+          >
             <Bolt className="w-5 h-5" />
-            Get Connected
-          </button>
+            Explore Sustainable Solutions
+          </motion.button>
         </motion.div>
       </div>
 

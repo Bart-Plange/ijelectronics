@@ -21,31 +21,38 @@ const Header = () => {
           <a 
             href="tel:+233557596325" 
             className="text-sm text-gray-300 hover:text-blue-400 transition-colors flex items-center"
+            aria-label="Call us"
           >
-            <Phone className="w-4 h-4 mr-1" />
+            <Phone className="w-4 h-4 mr-1" aria-hidden="true" />
             (+233) 557 596 325
           </a>
           <a 
             href="mailto:info@ijggtl.com" 
             className="text-sm text-gray-300 hover:text-blue-400 transition-colors flex items-center"
+            aria-label="Email us"
           >
-            <Mail className="w-4 h-4 mr-1" />
+            <Mail className="w-4 h-4 mr-1" aria-hidden="true" />
             info@ijggtl.com
           </a>
         </div>
       </div>
 
       {/* Main navigation */}
-      <nav className="container mx-auto px-6 py-4 relative">
+      <nav className="container mx-auto px-6 py-4 relative" aria-label="Main navigation">
         <div className="flex justify-between items-center">
           <Link 
             to="/" 
             className="flex items-center gap-3 hover:text-blue-400 transition-colors"
+            aria-label="Homepage"
           >
             <img 
               src="/logo.webp" 
-              alt="IJ Global Green Technology Limited logo" 
+              srcSet="/logo@2x.webp 2x"
+              alt="IJ Global Green Technology Limited - Sustainable Engineering Solutions"
               className="w-12 h-12"
+              width="48"
+              height="48"
+              loading="eager"
             />
             <h1 className="text-white font-bold text-lg md:text-xl lg:text-2xl">
               IJ GLOBAL GREEN<br className="hidden md:block" /> 
@@ -58,10 +65,15 @@ const Header = () => {
             {navLinks.map((link) => (
               <div key={link.path}>
                 {link.isButton ? (
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <motion.div 
+                    whileHover={{ scale: 1.05 }} 
+                    whileTap={{ scale: 0.95 }}
+                    role="button"
+                  >
                     <Link
                       to={link.path}
                       className="bg-blue-600 px-6 py-2 rounded-full text-white hover:bg-blue-700 transition-colors"
+                      aria-label={`Contact us - ${link.label}`}
                     >
                       {link.label}
                     </Link>
@@ -70,6 +82,7 @@ const Header = () => {
                   <Link
                     to={link.path}
                     className="text-gray-300 hover:text-blue-400 transition-colors text-lg"
+                    aria-current={link.path === window.location.pathname ? "page" : undefined}
                   >
                     {link.label}
                   </Link>
@@ -83,6 +96,7 @@ const Header = () => {
             className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors text-white z-50"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Mobile menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
           </button>
@@ -95,10 +109,12 @@ const Header = () => {
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            transition={{ type: "tween", duration: 0.3 }}
+            role="dialog"
+            aria-modal="true"
           >
-            <div className="h-[calc(100vh-84px)] overflow-y-auto p-4 pt-8">
-              <div className="max-w-sm mx-auto space-y-2">
+            <div className="h-[calc(100dvh-84px)] overflow-y-auto p-4 pt-8">
+              <nav className="max-w-sm mx-auto space-y-2" aria-label="Mobile navigation">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
@@ -109,11 +125,12 @@ const Header = () => {
                         : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     } rounded-xl transition-colors`}
                     onClick={() => setIsOpen(false)}
+                    aria-current={link.path === window.location.pathname ? "page" : undefined}
                   >
                     {link.label}
                   </Link>
                 ))}
-              </div>
+              </nav>
             </div>
           </motion.div>
         )}
