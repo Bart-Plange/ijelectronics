@@ -1,8 +1,21 @@
 import { motion } from "framer-motion";
 import { FaLightbulb, FaChartLine, FaBuilding, FaLeaf } from "react-icons/fa";
+import { JSX, useEffect } from "react";
+
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  icon: JSX.Element;
+  image: string;
+  stats: string;
+  category: string;
+  className: string;
+  alt: string;
+};
 
 const Portfolio = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: "Smart City Lighting",
@@ -49,25 +62,33 @@ const Portfolio = () => {
     }
   ];
 
-  // Set page metadata
-  const pageTitle = "Our Portfolio | IJ Global Green Technology Limited";
-  const pageDescription = "Explore our innovative projects in smart city solutions, green office spaces, industrial automation, and smart building technologies.";
-  document.title = pageTitle;
-
-  // Add meta tags dynamically
-  const addMetaTag = (name, content) => {
+  // Meta tag management
+  const addMetaTag = (name: string, content: string) => {
     let tag = document.querySelector(`meta[name="${name}"]`);
     if (!tag) {
       tag = document.createElement('meta');
-      tag.name = name;
+      tag.setAttribute('name', name);
       document.head.appendChild(tag);
     }
-    tag.content = content;
+    tag.setAttribute('content', content);
   };
 
-  // Set meta tags
-  addMetaTag('description', pageDescription);
-  addMetaTag('keywords', 'smart city, green technology, industrial automation, smart buildings, sustainable solutions');
+  useEffect(() => {
+    // Set page metadata
+    const pageTitle = "Our Portfolio | IJ Global Green Technology Limited";
+    const pageDescription = "Explore our innovative projects in smart city solutions, green office spaces, industrial automation, and smart building technologies.";
+    
+    document.title = pageTitle;
+    addMetaTag('description', pageDescription);
+    addMetaTag('keywords', 'smart city, green technology, industrial automation, smart buildings, sustainable solutions');
+
+    // Cleanup function
+    return () => {
+      document.title = 'IJ Global Green Technology Limited'; // Reset default title
+      document.querySelectorAll('meta[name="description"], meta[name="keywords"]')
+        .forEach(meta => meta.remove());
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-900 py-24 px-4">
