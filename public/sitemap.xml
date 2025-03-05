@@ -47,27 +47,4 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- Service Detail Pages (Add more as needed) -->
-  <url>
-    <loc>https://ijggtl.com/services/street-lighting</loc>
-    <lastmod>2024-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ijggtl.com/services/thermal-insulation</loc>
-    <lastmod>2024-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Blog/Articles (Add when available) -->
-  <url>
-    <loc>https://ijggtl.com/blog</loc>
-    <lastmod>2024-03-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
 </urlset>
