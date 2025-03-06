@@ -110,12 +110,12 @@ export const StatesBanner = () => {
               <div className="flex items-center gap-4 text-sm text-white/80">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-blue-300" />
-                  <span>Municipal Certified</span>
+                  <span>Well Accredited</span>
                 </div>
                 <div className="h-4 w-px bg-white/30" />
                 <div className="flex items-center gap-2">
                   <Zap className="w-4 h-4 text-blue-300" />
-                  <span>20+ Years Experience</span>
+                  <span>Well Experienced</span>
                 </div>
               </div>
             </div>

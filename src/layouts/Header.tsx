@@ -49,7 +49,7 @@ const Header = () => {
               src="/logo.webp" 
               srcSet="/logo@2x.webp 2x"
               alt="IJ Global Green Technology Limited - Sustainable Engineering Solutions"
-              className="w-12 h-12"
+              className="w-12 h-12 hidden md:block"  // Hide logo on mobile
               width="48"
               height="48"
               loading="eager"

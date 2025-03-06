@@ -9,7 +9,7 @@ export const ServicesHero = () => {
       <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-gray-900 to-transparent z-10" />
 
       {/* Text Container - Positioned at bottom left */}
-      <div className="absolute bottom-0 left-0 z-20 max-w-2xl mx-auto md:mx-0 md:ml-12 lg:ml-24 flex flex-col items-start pb-24 pl-6">
+      <div className="absolute bottom-0 left-0 z-20 w-full max-w-2xl mx-auto md:mx-0 md:ml-12 lg:ml-24 flex flex-col items-start pb-24 pl-6">
         <motion.p 
           className="text-sm text-blue-400 mb-4 font-medium"
           initial={{ opacity: 0, y: 20 }}
@@ -40,15 +40,17 @@ export const ServicesHero = () => {
             and industrial applications. Expertise in energy-efficient implementations, 
             smart city technologies, and environmental management systems.
           </p>
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-blue-600 hover:bg-blue-700 transition-all px-8 py-4 text-lg font-semibold rounded-full flex items-center gap-2 shadow-xl"
-            aria-label="Explore our sustainable infrastructure services"
-          >
-            <Bolt className="w-5 h-5" />
-            Discover Sustainable Systems
-          </motion.button>
+          <a href="#services">
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-blue-600 hover:bg-blue-700 transition-all px-8 py-4 text-lg font-semibold rounded-full flex items-center gap-2 shadow-xl"
+              aria-label="Explore our sustainable infrastructure services"
+            >
+              <Bolt className="w-5 h-5" />
+              Discover Sustainable Systems
+            </motion.button>
+          </a>
         </motion.div>
       </div>
 
@@ -71,21 +73,22 @@ export const ServicesHero = () => {
       </script>
 
       {/* Streetlight and Illumination Effect */}
-      <div className="absolute right-0 top-0 h-full w-1/6 md:w-1/3">
+      {/* Hide this decoration on screens smaller than md */}
+      <div className="hidden md:block absolute right-0 top-0 h-full w-1/3">
         {/* Light Beam with mobile opacity */}
-        <div className="absolute inset-0 bg-gradient-to-l from-yellow-400/20 to-transparent w-full h-full pointer-events-none md:opacity-100 opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-l from-yellow-400/20 to-transparent w-full h-full pointer-events-none opacity-50" />
         
-        {/* Streetlight Pole with mobile opacity */}
-        <div className="absolute md:right-24 right-4 h-full w-2 bg-gray-300 md:opacity-100 opacity-50">
+        {/* Streetlight Pole */}
+        <div className="absolute md:right-24 right-4 h-full w-2 bg-gray-300 opacity-50">
           {/* Light Fixture */}
           <div className="absolute top-1/4 -right-4 w-12 h-24 bg-gray-400 rounded-t-full flex items-end justify-center pb-4">
             <div className="w-8 h-8 bg-yellow-400 rounded-full animate-glow shadow-glow" />
           </div>
         </div>
 
-        {/* Decorative Elements with mobile opacity */}
-        <div className="absolute right-20 top-1/3 w-32 h-32 bg-blue-600/20 rounded-full blur-xl md:opacity-100 opacity-50" />
-        <div className="absolute right-32 top-1/2 w-24 h-24 bg-yellow-400/20 rounded-full blur-xl md:opacity-100 opacity-50" />
+        {/* Decorative Elements */}
+        <div className="absolute right-20 top-1/3 w-32 h-32 bg-blue-600/20 rounded-full blur-xl opacity-50" />
+        <div className="absolute right-32 top-1/2 w-24 h-24 bg-yellow-400/20 rounded-full blur-xl opacity-50" />
       </div>
 
       {/* Animated Sparks */}

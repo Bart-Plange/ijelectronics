@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const ValueProposition = () => {
   return (
-    <section className="w-full px-4 py-24 bg-gray-900" aria-labelledby="services-heading">
+    <section id="value-proposition" className="w-full px-4 py-24 bg-gray-900" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto space-y-12">
         <motion.h2 
           id="services-heading"

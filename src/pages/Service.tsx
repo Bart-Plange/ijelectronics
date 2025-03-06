@@ -1,3 +1,4 @@
+// pages/Services.tsx
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { 
   FaStreetView, 
@@ -81,10 +82,11 @@ const Services = () => {
   ];
 
   return (
-    <main className="bg-gray-900">
+    <main className="bg-gray-900 overflow-x-hidden">
       <ServicesHero />
       
-      <section 
+      <section
+        id="services"  
         className="max-w-6xl mx-auto py-20 px-4 space-y-24"
         itemScope
         itemType="https://schema.org/ItemList"
@@ -140,9 +142,7 @@ const ServiceSection = ({ service, index }: { service: any; index: number }) => 
 
   const parseHighlightedText = (text: string) => {
     return text.split('**').map((part, i) => 
-      i % 2 === 0 ? (
-        part
-      ) : (
+      i % 2 === 0 ? part : (
         <motion.span
           key={i}
           className="text-blue-400 font-semibold"

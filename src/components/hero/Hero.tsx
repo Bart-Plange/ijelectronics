@@ -39,15 +39,18 @@ export const Hero = () => {
             energy-efficient lighting, smart city technologies, and sustainable 
             environmental management systems.
           </p>
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-blue-600 hover:bg-blue-700 transition-all px-8 py-4 text-lg font-semibold rounded-full flex items-center gap-2 shadow-xl"
-            aria-label="Explore our sustainable infrastructure solutions"
-          >
-            <Bolt className="w-5 h-5" />
-            Explore Sustainable Solutions
-          </motion.button>
+          {/* Link the button to the Value Proposition section */}
+          <a href="#value-proposition">
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-blue-600 hover:bg-blue-700 transition-all px-8 py-4 text-lg font-semibold rounded-full flex items-center gap-2 shadow-xl"
+              aria-label="Explore our sustainable infrastructure solutions"
+            >
+              <Bolt className="w-5 h-5" />
+              Explore Sustainable Solutions
+            </motion.button>
+          </a>
         </motion.div>
       </div>
 
