@@ -20,7 +20,7 @@ const Header = () => {
         <div className="container mx-auto flex flex-col md:flex-row justify-end items-center space-y-1 md:space-y-0 md:space-x-6">
           <a 
             href="tel:+233557596325" 
-            className="text-sm text-gray-300 hover:text-blue-400 transition-colors flex items-center"
+            className="text-sm text-gray-300 hover:text-green-400 transition-colors flex items-center"
             aria-label="Call us"
           >
             <Phone className="w-4 h-4 mr-1" aria-hidden="true" />
@@ -28,7 +28,7 @@ const Header = () => {
           </a>
           <a 
             href="mailto:info@ijggtl.com" 
-            className="text-sm text-gray-300 hover:text-blue-400 transition-colors flex items-center"
+            className="text-sm text-gray-300 hover:text-green-400 transition-colors flex items-center"
             aria-label="Email us"
           >
             <Mail className="w-4 h-4 mr-1" aria-hidden="true" />
@@ -42,7 +42,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <Link 
             to="/" 
-            className="flex items-center gap-3 hover:text-blue-400 transition-colors"
+            className="flex items-center gap-3 hover:text-green-400 transition-colors"
             aria-label="Homepage"
           >
             <img 
@@ -55,7 +55,7 @@ const Header = () => {
               loading="eager"
             />
             <h1 className="text-white font-bold text-lg md:text-xl lg:text-2xl">
-              IJ GLOBAL GREEN<br className="hidden md:block" /> 
+              IJ GLOBAL GREEN<br /> 
               TECHNOLOGY LIMITED
             </h1>
           </Link>
@@ -72,7 +72,7 @@ const Header = () => {
                   >
                     <Link
                       to={link.path}
-                      className="bg-blue-600 px-6 py-2 rounded-full text-white hover:bg-blue-700 transition-colors"
+                      className="bg-green-600 px-6 py-2 rounded-full text-white hover:bg-green-700 transition-colors"
                       aria-label={`Contact us - ${link.label}`}
                     >
                       {link.label}
@@ -81,7 +81,7 @@ const Header = () => {
                 ) : (
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-lg"
+                    className="text-gray-300 hover:text-green-400 transition-colors text-lg"
                     aria-current={link.path === window.location.pathname ? "page" : undefined}
                   >
                     {link.label}
@@ -121,7 +121,7 @@ const Header = () => {
                     to={link.path}
                     className={`block py-4 px-6 text-lg ${
                       link.isButton 
-                        ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                        ? 'bg-green-600 text-white hover:bg-green-700' 
                         : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                     } rounded-xl transition-colors`}
                     onClick={() => setIsOpen(false)}

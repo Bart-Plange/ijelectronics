@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-blue-400">IJ Global Green Technology Limited</h3>
+            <h3 className="text-xl font-bold text-green-400">IJ Global Green Technology Limited</h3>
             <p className="text-gray-400">
               Pioneering sustainable electrical engineering solutions across Ghana and Central Europe. 
               Specialists in energy-efficient infrastructure, smart lighting systems, and eco-friendly construction.
@@ -27,7 +27,7 @@ const Footer = () => {
                 href="https://www.facebook.com/ijggtl" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
+                className="text-gray-400 hover:text-green-400 transition-colors"
                 aria-label="Visit our Facebook page"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -38,7 +38,7 @@ const Footer = () => {
                 href="https://twitter.com/ijggtl" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
+                className="text-gray-400 hover:text-green-400 transition-colors"
                 aria-label="Follow us on Twitter"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -49,7 +49,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/ijggtl" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
+                className="text-gray-400 hover:text-green-400 transition-colors"
                 aria-label="Connect on LinkedIn"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -61,13 +61,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-blue-400">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-green-400">Quick Links</h4>
             <nav className="flex flex-col space-y-2" aria-label="Quick links">
               {navLinks.slice(0, 4).map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -77,13 +77,13 @@ const Footer = () => {
 
           {/* Legal */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-blue-400">Legal</h4>
+            <h4 className="text-lg font-semibold text-green-400">Legal</h4>
             <nav className="flex flex-col space-y-2" aria-label="Legal links">
               {navLinks.slice(4).map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -93,17 +93,17 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-blue-400">Contact Us</h4>
+            <h4 className="text-lg font-semibold text-green-400">Contact Us</h4>
             <div className="text-gray-400 space-y-2">
               <p className="font-medium">Ghana Office:</p>
               <p>Accra, Ghana</p>
-              <p>Phone: <a href="tel:+233557596325" className="hover:text-blue-400">+233 557 596 325</a></p>
+              <p>Phone: <a href="tel:+233557596325" className="hover:text-green-400">+233 557 596 325</a></p>
               
               <p className="font-medium mt-4">Central Europe Office:</p>
               <p>Prague, Czech Republic</p>
-              <p>Phone: <a href="tel:+420733114209" className="hover:text-blue-400">+420 733 114 209</a></p>
+              <p>Phone: <a href="tel:+420733114209" className="hover:text-green-400">+420 733 114 209</a></p>
               
-              <p className="mt-4">Email: <a href="mailto:info@ijggtl.com" className="hover:text-blue-400">info@ijggtl.com</a></p>
+              <p className="mt-4">Email: <a href="mailto:info@ijggtl.com" className="hover:text-green-400">info@ijggtl.com</a></p>
             </div>
           </div>
         </div>

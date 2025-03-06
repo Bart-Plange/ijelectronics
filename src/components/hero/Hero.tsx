@@ -10,7 +10,7 @@ export const Hero = () => {
       {/* Text Container - Positioned at bottom left */}
       <div className="absolute bottom-0 left-0 z-20 max-w-2xl mx-auto md:mx-0 md:ml-12 lg:ml-24 flex flex-col items-start pb-24 pl-6">
         <motion.p 
-          className="text-sm text-blue-400 mb-4 font-medium"
+          className="text-sm text-green-400 mb-4 font-medium"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -44,7 +44,7 @@ export const Hero = () => {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 hover:bg-blue-700 transition-all px-8 py-4 text-lg font-semibold rounded-full flex items-center gap-2 shadow-xl"
+              className="bg-green-600 hover:bg-green-700 transition-all px-8 py-4 text-lg font-semibold rounded-full flex items-center gap-2 shadow-xl"
               aria-label="Explore our sustainable infrastructure solutions"
             >
               <Bolt className="w-5 h-5" />

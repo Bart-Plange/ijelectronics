@@ -14,7 +14,7 @@ export const ValueProposition = () => {
           viewport={{ once: true, margin: "0px 0px 100px 0px" }}
         >
           <span className="sr-only">IJ Global Green Technology - </span>
-          <p className="text-white"><span className="text-blue-400">Smart Infrastructure</span> Solutions</p>
+          <p className="text-white"><span className="text-green-400">Smart Infrastructure</span> Solutions</p>
         </motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
@@ -69,7 +69,7 @@ const ServiceCard = ({ id, icon, title, content, keywords }: {
     
     <div className="mb-6 flex justify-center" itemProp="provider" itemScope itemType="https://schema.org/Organization">
       <meta itemProp="name" content="IJ Global Green Technology Limited" />
-      <span className="p-4 bg-gray-700 rounded-full text-blue-400 group-hover:bg-blue-900/20 transition-colors">
+      <span className="p-4 bg-gray-700 rounded-full text-green-400 group-hover:bg-green-900/20 transition-colors">
         {icon}
       </span>
     </div>
@@ -82,7 +82,7 @@ const ServiceCard = ({ id, icon, title, content, keywords }: {
       )}
     </p>
     
-    <div className="mt-6 flex items-center gap-2 text-blue-400 group-hover:text-blue-300 transition-colors">
+    <div className="mt-6 flex items-center gap-2 text-green-400 group-hover:text-green-300 transition-colors">
       <span className="font-semibold">Explore Solutions</span>
       <motion.span 
         className="inline-block"
@@ -104,7 +104,7 @@ const ServiceCard = ({ id, icon, title, content, keywords }: {
 
     {/* Hover gradient effect */}
     <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-      <div className="absolute -inset-[1px] bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl" />
+      <div className="absolute -inset-[1px] bg-gradient-to-br from-green-500/20 to-purple-500/20 rounded-2xl" />
     </div>
   </motion.article>
 );

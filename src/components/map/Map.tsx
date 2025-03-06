@@ -10,7 +10,7 @@ const Map: React.FC<MapProps> = ({ title }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <figure className="w-full h-[50vh] relative" aria-label="Company locations map">
+    <figure className="w-full h-[100vh] relative" aria-label="Company locations map">
       {/* Loading Skeleton */}
       {!isLoaded && (
         <div 

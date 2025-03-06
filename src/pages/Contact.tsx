@@ -40,12 +40,12 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl font-bold text-blue-400 mb-4">
+            <h1 className="text-4xl font-bold text-green-400 mb-4">
               Contact IJ Global Green Technology
             </h1>
             <div className="flex items-center justify-center space-x-4 mb-8">
               <FaBolt className="w-8 h-8 text-yellow-400 animate-pulse" aria-hidden="true" />
-              <div className="h-1 w-12 bg-blue-600 rounded-full"></div>
+              <div className="h-1 w-12 bg-green-600 rounded-full"></div>
             </div>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Connect with our electrical engineering experts for smart city solutions, 
@@ -84,7 +84,7 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             {/* Contact Form */}
             <div className="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700">
-              <h2 className="text-2xl font-bold text-blue-400 mb-6">Send us a message</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-6">Send us a message</h2>
               <form className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
@@ -95,7 +95,7 @@ const Contact = () => {
                     name="name"
                     type="text"
                     required
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-100"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-100"
                   />
                 </div>
                 <div>
@@ -107,7 +107,7 @@ const Contact = () => {
                     name="email"
                     type="email"
                     required
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-100"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-100"
                   />
                 </div>
                 <div>
@@ -119,12 +119,12 @@ const Contact = () => {
                     name="message"
                     rows={4}
                     required
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-100"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-100"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center gap-2"
+                  className="w-full bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition-colors font-semibold flex items-center justify-center gap-2"
                   aria-label="Submit contact form"
                 >
                   <FaBolt className="w-5 h-5 text-yellow-400" aria-hidden="true" />
@@ -143,9 +143,9 @@ const Contact = () => {
                 itemType="https://schema.org/PostalAddress"
               >
                 <div className="flex items-start space-x-4 mb-6">
-                  <FaMapMarkerAlt className="text-blue-400 mt-1 flex-shrink-0" aria-hidden="true" />
+                  <FaMapMarkerAlt className="text-green-400 mt-1 flex-shrink-0" aria-hidden="true" />
                   <div>
-                    <h3 className="font-semibold text-blue-400">Office Locations</h3>
+                    <h3 className="font-semibold text-green-400">Office Locations</h3>
                     <div className="text-gray-300 space-y-4">
                       <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                         <p itemProp="addressLocality">Accra</p>
@@ -163,9 +163,9 @@ const Contact = () => {
                 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <FaPhone className="text-blue-400 mt-1 flex-shrink-0" aria-hidden="true" />
+                    <FaPhone className="text-green-400 mt-1 flex-shrink-0" aria-hidden="true" />
                     <div>
-                      <h3 className="font-semibold text-blue-400">Phone Numbers</h3>
+                      <h3 className="font-semibold text-green-400">Phone Numbers</h3>
                       <div className="text-gray-300 space-y-2">
                         <a href="tel:+233557596325" className="block hover:text-yellow-400 transition-colors">
                           GH: +233 557 596 325
@@ -178,9 +178,9 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <FaWhatsapp className="text-blue-400 mt-1 flex-shrink-0" aria-hidden="true" />
+                    <FaWhatsapp className="text-green-400 mt-1 flex-shrink-0" aria-hidden="true" />
                     <div>
-                      <h3 className="font-semibold text-blue-400">WhatsApp</h3>
+                      <h3 className="font-semibold text-green-400">WhatsApp</h3>
                       <a 
                         href="https://wa.me/420605894986" 
                         className="text-gray-300 hover:text-yellow-400 transition-colors block"
@@ -194,9 +194,9 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <FaEnvelope className="text-blue-400 mt-1 flex-shrink-0" aria-hidden="true" />
+                    <FaEnvelope className="text-green-400 mt-1 flex-shrink-0" aria-hidden="true" />
                     <div>
-                      <h3 className="font-semibold text-blue-400">Email Address</h3>
+                      <h3 className="font-semibold text-green-400">Email Address</h3>
                       <a 
                         href="mailto:info@ijggtl.com" 
                         className="text-gray-300 hover:text-yellow-400 transition-colors block"
@@ -215,11 +215,11 @@ const Contact = () => {
                 transition={{ delay: 0.2 }}
                 className="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700"
               >
-                <h3 className="text-lg font-semibold text-blue-400 mb-4">Follow Our Work</h3>
+                <h3 className="text-lg font-semibold text-green-400 mb-4">Follow Our Work</h3>
                 <div className="flex space-x-6">
                   <a 
                     href="https://www.facebook.com/ijggtl" 
-                    className="text-blue-400 hover:text-yellow-400 transition-colors"
+                    className="text-green-400 hover:text-yellow-400 transition-colors"
                     aria-label="Visit our Facebook page"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -228,7 +228,7 @@ const Contact = () => {
                   </a>
                   <a 
                     href="https://twitter.com/ijggtl" 
-                    className="text-blue-400 hover:text-yellow-400 transition-colors"
+                    className="text-green-400 hover:text-yellow-400 transition-colors"
                     aria-label="Follow us on Twitter"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -237,7 +237,7 @@ const Contact = () => {
                   </a>
                   <a 
                     href="https://www.linkedin.com/company/ijggtl" 
-                    className="text-blue-400 hover:text-yellow-400 transition-colors"
+                    className="text-green-400 hover:text-yellow-400 transition-colors"
                     aria-label="Connect on LinkedIn"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -265,3 +265,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

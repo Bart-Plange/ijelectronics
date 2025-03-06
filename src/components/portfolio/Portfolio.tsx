@@ -101,10 +101,10 @@ const Portfolio = () => {
           viewport={{ once: true }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Our <span className="text-blue-400">Portfolio</span>
+            Our <span className="text-green-400">Portfolio</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Showcasing our innovative projects that blend cutting-edge technology with sustainable design
+            Showcasing our innovative projects with sustainable design
           </p>
         </motion.div>
 
@@ -134,26 +134,26 @@ const Portfolio = () => {
                   <div className="mb-4">
                     {project.icon}
                   </div>
-                  <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors" itemProp="name">
+                  <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors" itemProp="name">
                     {project.title}
                   </h2>
-                  <p className="text-gray-300 group-hover:text-blue-400/80 transition-colors" itemProp="description">
+                  <p className="text-gray-300 group-hover:text-green-400/80 transition-colors" itemProp="description">
                     {project.description}
                   </p>
                 </div>
 
                 <div className="mt-4">
-                  <div className="text-sm text-gray-300 mb-2 group-hover:text-blue-400 transition-colors" itemProp="genre">
+                  <div className="text-sm text-gray-300 mb-2 group-hover:text-green-400 transition-colors" itemProp="genre">
                     {project.category}
                   </div>
-                  <div className="text-lg font-bold text-blue-400 group-hover:text-blue-300 transition-colors" itemProp="award">
+                  <div className="text-lg font-bold text-green-400 group-hover:text-green-300 transition-colors" itemProp="award">
                     {project.stats}
                   </div>
                 </div>
               </div>
 
               {/* Hover Effect */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/20 to-blue-900/40 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-900/20 to-green-900/40 opacity-0 group-hover:opacity-100 transition-opacity" />
             </motion.article>
           ))}
         </div>

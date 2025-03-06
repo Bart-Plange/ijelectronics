@@ -39,7 +39,7 @@ export const StatesBanner = () => {
       <div className="w-full max-w-4xl mx-auto">
         <motion.div
           ref={cardRef}
-          className="bg-gradient-to-br from-blue-700 to-blue-900 text-white p-12 rounded-3xl shadow-2xl relative overflow-hidden"
+          className="bg-gradient-to-br from-green-700 to-green-900 text-white p-12 rounded-3xl shadow-2xl relative overflow-hidden"
           style={{
             rotateX,
             rotateY,
@@ -56,7 +56,7 @@ export const StatesBanner = () => {
           <div className="relative z-10 space-y-10 text-center">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-3 bg-white/10 px-6 py-2 rounded-full">
-                <Smartphone className="w-5 h-5 text-blue-400" />
+                <Smartphone className="w-5 h-5 text-green-400" />
                 <span className="font-semibold">Smart City Solutions</span>
               </div>
               <h2 className="text-5xl font-bold">
@@ -68,17 +68,17 @@ export const StatesBanner = () => {
             <div className="grid md:grid-cols-3 gap-8 text-left">
               {[
                 { 
-                  icon: <LampCeiling className="w-8 h-8 text-blue-300" />,
+                  icon: <LampCeiling className="w-8 h-8 text-green-300" />,
                   title: "Adaptive Lighting",
                   text: "Smart LED systems that auto-adjust based on environment and usage patterns"
                 },
                 { 
-                  icon: <TrafficCone className="w-8 h-8 text-blue-300" />,
+                  icon: <TrafficCone className="w-8 h-8 text-green-300" />,
                   title: "Traffic Management",
                   text: "Integrated smart traffic lights with real-time monitoring and control"
                 },
                 { 
-                  icon: <Zap className="w-8 h-8 text-blue-300" />,
+                  icon: <Zap className="w-8 h-8 text-green-300" />,
                   title: "Energy Efficient",
                   text: "Reduce municipal lighting costs by up to 65% with our smart grids"
                 }
@@ -99,7 +99,7 @@ export const StatesBanner = () => {
 
             <div className="flex flex-col items-center gap-6">
               <motion.button 
-                className="bg-white text-blue-900 px-10 py-5 rounded-full font-bold text-lg hover:bg-blue-50 transition-all flex items-center gap-3"
+                className="bg-white text-green-900 px-10 py-5 rounded-full font-bold text-lg hover:bg-green-50 transition-all flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -109,12 +109,12 @@ export const StatesBanner = () => {
               
               <div className="flex items-center gap-4 text-sm text-white/80">
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-blue-300" />
+                  <ShieldCheck className="w-4 h-4 text-green-300" />
                   <span>Well Accredited</span>
                 </div>
                 <div className="h-4 w-px bg-white/30" />
                 <div className="flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-blue-300" />
+                  <Zap className="w-4 h-4 text-green-300" />
                   <span>Well Experienced</span>
                 </div>
               </div>

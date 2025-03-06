@@ -1,16 +1,18 @@
 // src/pages/PrivacyPolicy.tsx
 const PrivacyPolicy = () => {
     return (
-      <div className="max-w-4xl mx-auto p-8 text-gray-300 bg-gray-900 min-h-screen">
-        <h1 className="text-4xl font-bold mb-8 text-blue-400">Privacy Policy</h1>
+      <div className="p-8 text-gray-300 bg-gray-900 min-h-screen">
+        <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold mb-8 text-green-400">Privacy Policy</h1>
         
-        <p className="mb-6">Last Updated: [Date]</p>
+        <p className="mb-6">Last Updated: March 2025</p>
   
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
           <p className="mb-4">
-            [Company Name] ("we," "us," or "our") respects your privacy. This policy explains how we collect, use, 
-            and protect your personal information when you use our website [Website URL] or engage with our services.
+          IJ GLOBAL GREEN
+          TECHNOLOGY LIMITED - respects your privacy. This policy explains how we collect, use, 
+            and protect your personal information when you use our website https://www.ijggtl.com or engage with our services.
           </p>
         </section>
   
@@ -61,7 +63,7 @@ const PrivacyPolicy = () => {
             <li>Opt out of marketing emails</li>
             <li>Withdraw consent</li>
           </ul>
-          <p className="mt-4">Contact us at [Email] to exercise these rights.</p>
+          <p className="mt-4">Contact us at info@ijggtl.com to exercise these rights.</p>
         </section>
   
         <section className="mb-8">
@@ -77,6 +79,7 @@ const PrivacyPolicy = () => {
             Changes will be posted here. Review this page periodically.
           </p>
         </section>
+        </div>
       </div>
     );
   };

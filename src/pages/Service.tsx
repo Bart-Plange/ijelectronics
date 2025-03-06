@@ -145,7 +145,7 @@ const ServiceSection = ({ service, index }: { service: any; index: number }) => 
       i % 2 === 0 ? part : (
         <motion.span
           key={i}
-          className="text-blue-400 font-semibold"
+          className="text-green-400 font-semibold"
           initial={{ opacity: 0.8 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -179,7 +179,7 @@ const ServiceSection = ({ service, index }: { service: any; index: number }) => 
         viewport={{ once: true, margin: "0px 0px -100px 0px" }}
         className="flex-1 space-y-6"
       >
-        <div className="text-blue-400" aria-hidden="true">
+        <div className="text-green-400" aria-hidden="true">
           {service.icon}
         </div>
         <h2 
@@ -198,7 +198,7 @@ const ServiceSection = ({ service, index }: { service: any; index: number }) => 
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-blue-600 px-8 py-3 rounded-full text-white hover:bg-blue-700 transition-colors"
+          className="bg-green-600 px-8 py-3 rounded-full text-white hover:bg-green-700 transition-colors"
           aria-label={`Learn more about ${service.title}`}
         >
           Detailed Specifications
@@ -214,7 +214,7 @@ const ServiceSection = ({ service, index }: { service: any; index: number }) => 
         }}
         className="flex-1 relative group w-full"
       >
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-1">
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-green-600/20 to-yellow-600/20 p-1">
           <div className="bg-gray-800 rounded-2xl p-4 min-h-[400px] flex items-center justify-center">
             <img
               src={service.image}

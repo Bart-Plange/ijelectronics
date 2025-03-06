@@ -1,22 +1,23 @@
 // src/pages/TermsAndConditions.tsx
 const TermsAndConditions = () => {
     return (
-      <div className="max-w-4xl mx-auto p-8 text-gray-300 bg-gray-900 min-h-screen">
-        <h1 className="text-4xl font-bold mb-8 text-blue-400">Terms & Conditions</h1>
+      <div className=" p-8 text-gray-300 bg-gray-900 min-h-screen">
+        <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold mb-8 text-green-400">Terms & Conditions</h1>
         
-        <p className="mb-6">Last Updated: [Date]</p>
+        <p className="mb-6">Last Updated: March 2025</p>
   
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
           <p className="mb-4">
-            By using [Website URL] ("the Site"), you agree to these Terms. Do not use the Site if you disagree.
+            By using ijggtl.com, you agree to these Terms. Do not use the Site if you disagree.
           </p>
         </section>
   
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">2. Services</h2>
           <p className="mb-4">
-            [Company Name] provides electrical services, including streetlight installation, traffic system maintenance, 
+          IJ GLOBAL GREEN TECHNOLOGY LIMITED provides electrical services, including streetlight installation, traffic system installations, 
             and smart city infrastructure solutions. All services are subject to separate service agreements.
           </p>
         </section>
@@ -24,7 +25,8 @@ const TermsAndConditions = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">3. Intellectual Property</h2>
           <p className="mb-4">
-            All content (logos, text, images) is owned by [Company Name]. Unauthorized use is prohibited.
+            All content (logos, text, images) is owned by IJ GLOBAL GREEN
+            TECHNOLOGY LIMITED. Unauthorized use is prohibited.
           </p>
         </section>
   
@@ -77,7 +79,7 @@ const TermsAndConditions = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">9. Governing Law</h2>
           <p className="mb-4">
-            These Terms are governed by the laws of [State/Country].
+            These Terms are governed by the laws of Ghana.
           </p>
         </section>
   
@@ -87,6 +89,7 @@ const TermsAndConditions = () => {
             Updates will be posted here. Continued use constitutes acceptance.
           </p>
         </section>
+        </div>
       </div>
     );
   };
