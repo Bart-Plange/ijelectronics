@@ -16,7 +16,7 @@ export const ServicesHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Sustainable Infrastructure Specialists
+          Smart Electrical and electronic Experts
         </motion.p>
         
         <motion.h1
@@ -26,7 +26,7 @@ export const ServicesHero = () => {
           transition={{ duration: 1, delay: 0.2 }}
         >
           Smart Infrastructure<br className="hidden md:block"/> 
-          <span className="text-blue-400">Engineering Services</span>
+          <span className="text-blue-400">Lightening Services</span>
         </motion.h1>
         
         <motion.div
