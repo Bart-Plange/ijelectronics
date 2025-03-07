@@ -87,7 +87,7 @@ const Contact = () => {
               <h2 className="text-2xl font-bold text-green-400 mb-6">Send us a message</h2>
 
               <form className="space-y-6" name="contact" method="POST" data-netlify="true">
-              <input type="hidden" name="contact" value="contact" />
+              <input type="hidden" name="form-name" value="contact" />
 
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
