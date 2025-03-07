@@ -3,7 +3,7 @@ import { Bolt } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <div className="relative -mt-[6.5rem] pt-[6.5rem] min-h-[800px] bg-gray-900 text-white pb-16 px-6 overflow-hidden">
+    <div className="relative -mt-[8.5rem] pt-[6.5rem] min-h-[800px] bg-gray-900 text-white pb-16 px-4 overflow-hidden">
       {/* Gradient overlay for seamless transition */}
       <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-gray-900 to-transparent z-10" />
 
@@ -19,7 +19,7 @@ export const Hero = () => {
         </motion.p>
         
         <motion.h1
-          className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
+          className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
@@ -33,18 +33,16 @@ export const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          <p className="text-gray-300 text-lg max-w-xl mb-6">
-            Delivering full-cycle electrical systems and eco-conscious solutions 
-            for public infrastructure and industrial applications. Specializing in 
-            energy-efficient lighting, smart city technologies, and sustainable 
-            environmental management systems.
+          <p className="text-gray-300 text-lg md:max-w-xl mb-6">
+            We Specialize in energy-efficient street lighting, smart traffic light systems, and sustainable 
+            environmental engineering systems.
           </p>
           {/* Link the button to the Value Proposition section */}
           <a href="#value-proposition">
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-green-600 hover:bg-green-700 transition-all px-8 py-4 text-lg font-semibold rounded-full flex items-center gap-2 shadow-xl"
+              className="bg-green-600 hover:bg-green-700 transition-all px-8 py-2 text-md md:text-lg font-semibold rounded-full flex items-center gap-2 shadow-xl"
               aria-label="Explore our sustainable infrastructure solutions"
             >
               <Bolt className="w-5 h-5" />
@@ -55,7 +53,7 @@ export const Hero = () => {
       </div>
 
       {/* Streetlight and Illumination Effect */}
-      <div className="absolute right-0 top-0 h-full w-1/6 md:w-1/3">
+      <div className="hidden md:block absolute right-0 top-0 h-full w-1/6 md:w-1/3">
         {/* Light Beam with mobile opacity */}
         <div className="absolute inset-0 bg-gradient-to-l from-yellow-400/20 to-transparent w-full h-full pointer-events-none md:opacity-100 opacity-50" />
         

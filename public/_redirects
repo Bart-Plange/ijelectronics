@@ -1,0 +1,5 @@
+# Redirect all traffic from the www version to the non-www version
+https://www.ijggtl.com/*  https://ijggtl.com/:splat 301!
+
+# Fallback rule for single‑page application routing:
+/*  /index.html  200
