@@ -85,7 +85,10 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700">
               <h2 className="text-2xl font-bold text-green-400 mb-6">Send us a message</h2>
-              <form className="space-y-6">
+
+              <form className="space-y-6" name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="contact" value="contact" />
+
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
                     Name
