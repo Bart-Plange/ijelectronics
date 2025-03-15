@@ -6,3 +6,4 @@ export {default as Map} from './map/Map';
 export {default as ServicesHero} from './service/ServiceHero';
 export {default as ServiceCard} from './service/ServiceCard';
 export {default as Portfolio} from './portfolio/Portfolio';
+export {default as Modal} from './modal/Modal';

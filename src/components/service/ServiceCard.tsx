@@ -1,4 +1,5 @@
-// Updated ServiceCard component
+//service/seviceCard.tsx
+
 const ServiceCard = ({ id, icon, title, content }: { 
   id: string;
   icon: React.ReactNode;

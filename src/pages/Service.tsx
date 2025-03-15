@@ -10,17 +10,20 @@ import {
   FaTree,
   FaTools
 } from "react-icons/fa";
-import { useRef } from "react";
-import { ServicesHero } from "../components";
+import { useRef, useState } from "react";
+import { ServicesHero, Modal } from "../components";
 
 const Services = () => {
+  const [selectedService, setSelectedService] = useState(null);
+
   const services = [
     {
       id: "street-lighting",
       title: "Smart Street Lighting Systems",
-      icon: <FaStreetView className="text-6xl" aria-hidden="true" />,
+      icon: <FaStreetView className="text-6xl" aria-hidden="true" />, 
       content: "Complete **LED street lighting solutions** for highways & urban roads with **IoT-enabled monitoring** and maintenance across Ghana and Central Europe.",
-      image: "/images/street-lighting.webp",
+      details: "Detailed specifications for Smart Street Lighting include IoT sensors, remote monitoring, automated dimming, and high-efficiency LED components.",
+      image: "/services/stlight.webp",
       imageSide: "right"
     },
     {
@@ -28,7 +31,7 @@ const Services = () => {
       title: "Intelligent Traffic Management",
       icon: <FaTrafficLight className="text-6xl" aria-hidden="true" />,
       content: "AI-powered **traffic signal systems** with real-time optimization and **24/7 emergency support** for urban networks.",
-      image: "/images/traffic-systems.webp",
+      image: "/services/traffic.webp",
       imageSide: "left"
     },
     {
@@ -36,7 +39,7 @@ const Services = () => {
       title: "Industrial LED Solutions",
       icon: <FaIndustry className="text-6xl" aria-hidden="true" />,
       content: "Hazard-rated **industrial lighting installations** with energy analytics and **predictive maintenance** services.",
-      image: "/images/industrial-lighting.webp",
+      image: "/services/led.webp",
       imageSide: "right"
     },
     {
@@ -44,7 +47,7 @@ const Services = () => {
       title: "Thermal Insulation Coating",
       icon: <FaThermometerHalf className="text-6xl" aria-hidden="true" />,
       content: "Advanced **nano-technology coatings** for buildings and industrial equipment with **10-year durability guarantee**.",
-      image: "/images/thermal-coating.webp",
+      image: "/services/coating.webp",
       imageSide: "left"
     },
     {
@@ -52,7 +55,7 @@ const Services = () => {
       title: "Photocatalytic Coating",
       icon: <FaLeaf className="text-6xl" aria-hidden="true" />,
       content: "UV-activated **air-purifying coatings** reducing pollutants by up to **60% in urban areas**.",
-      image: "/images/eco-coating.webp",
+      image: "/services/photcoat.webp",
       imageSide: "right"
     },
     {
@@ -60,7 +63,7 @@ const Services = () => {
       title: "Air Quality Monitoring",
       icon: <FaCloud className="text-6xl" aria-hidden="true" />,
       content: "Real-time **pollution tracking systems** with **government-certified sensors** and data analysis.",
-      image: "/images/air-sensors.webp",
+      image: "/services/airmonitoring.webp",
       imageSide: "left"
     },
     {
@@ -68,7 +71,7 @@ const Services = () => {
       title: "Green Construction",
       icon: <FaTree className="text-6xl" aria-hidden="true" />,
       content: "Sustainable infrastructure development using **recycled materials** and **energy-efficient designs**.",
-      image: "/images/green-construction.webp",
+      image: "/services/green.webp",
       imageSide: "right"
     },
     {
@@ -76,7 +79,7 @@ const Services = () => {
       title: "Maintenance Solutions",
       icon: <FaTools className="text-6xl" aria-hidden="true" />,
       content: "Comprehensive **preventive maintenance programs** for urban and industrial infrastructure.",
-      image: "/images/maintenance.webp",
+      image: "/services/maintenance.webp",
       imageSide: "left"
     }
   ];
@@ -221,8 +224,8 @@ const ServiceSection = ({ service, index }: { service: any; index: number }) => 
               alt={`${service.title} implementation example`}
               loading="lazy"
               className="object-cover w-full h-full rounded-xl"
-              width={600}
-              height={400}
+              width={800}
+              height={384}
               itemProp="image"
             />
           </div>
