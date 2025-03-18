@@ -10,11 +10,11 @@ import {
   FaTree,
   FaTools
 } from "react-icons/fa";
-import { useRef, useState } from "react";
-import { ServicesHero, Modal } from "../components";
+import { useRef } from "react";
+import { ServicesHero } from "../components";
 
 const Services = () => {
-  const [selectedService, setSelectedService] = useState(null);
+  // const [selectedService, setSelectedService] = useState(null);
 
   const services = [
     {
